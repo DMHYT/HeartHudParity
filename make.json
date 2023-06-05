@@ -1,0 +1,49 @@
+{
+    "global": {
+        "info": {
+            "name": "Heart HUD Parity",
+            "author": "visualstudiodan",
+            "version": "1.0",
+            "description": "The mod that replaces the heart HUD, making it look exactly the same as in Minecraft: Java Edition",
+            "clientside": true,
+            "icon": "src/icon.png"
+        },
+        "api": "CoreEngine"
+    },
+    "make": {
+        "debugAbi": "armeabi-v7a",
+        "abis": [
+            "armeabi-v7a",
+            "x86"
+        ],
+        "linkNative": [
+            "minecraftpe",
+            "innercore",
+            "nativejs"
+        ],
+        "excludeFromRelease": [],
+        "pushTo": "storage/emulated/0/games/horizon/packs/Inner_Core/innercore/mods/HeartHudParity",
+        "ndkPath": null
+    },
+    "resources": [],
+    "sources": [
+        {
+            "source": "src/dev",
+            "target": "main.js",
+            "type": "main",
+            "language": "typescript"
+        },
+        {
+            "source": "src/launcher.js",
+            "type": "launcher",
+            "language": "javascript"
+        }
+    ],
+    "compile": [
+        {
+            "source": "src/native/*",
+            "type": "native"
+        }
+    ],
+    "additional": []
+}
