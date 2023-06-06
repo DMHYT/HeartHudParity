@@ -130,8 +130,8 @@ void HeartHudParityModule::fixupArmorOffset(Vec2& position, bool reverse) {
 	int healthBars = (int) ceilf((float) (maxHealth + absorption) / 2.0f);
 	int healthRows = (int) ceilf((float) healthBars / 10.0f);
 	int healthRowHeight = (int) fmaxf((float) (10 - (healthRows - 2)), 3.0f);
-	position.y -= (float) (reverseMultiplier * uiProfileMultiplier * healthRows * 10);
-	position.y += (float) (reverseMultiplier * uiProfileMultiplier * (healthRows * healthRowHeight + 7));
+	position.y -= (float) (reverseMultiplier * uiProfileMultiplier * (healthRows - 1) * 10);
+	position.y += (float) (reverseMultiplier * uiProfileMultiplier * ((healthRows - 1) * healthRowHeight));
 }
 
 
